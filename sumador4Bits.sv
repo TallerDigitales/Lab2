@@ -1,4 +1,4 @@
-module sumador4Bits (input logic a[3:0], b[3:0], ci, output r[3:0], output logic co);
+module sumador4Bits (input logic [3:0] a, b, input logic ci, output logic [3:0] r, output logic co);
 	
 	logic ci1, ci2, ci3;
 	sumador1bit s0 (a[0], b[0], ci, r[0], ci1); /*digito menos significativo*/
