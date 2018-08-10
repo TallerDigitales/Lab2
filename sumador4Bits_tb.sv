@@ -15,6 +15,11 @@ module sumador4Bits_tb();
 		b = 4'b0001;
 		ci = 0;
 		#10;
+		a = 4'b1101;
+		b = 4'b0001;
+		ci = 0;
+		#10;
+		
 		
 	end
 endmodule
