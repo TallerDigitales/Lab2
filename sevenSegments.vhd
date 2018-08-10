@@ -6,8 +6,10 @@ entity sevenSegments is
 end;
 
 architecture synth of sevenSegments is
+	signal temp: STD_LOGIC_VECTOR(6 downto 0);
+
 begin
-	Output <="1111110" when A = "0000" else -- 0
+	temp <= "1111110" when A = "0000" else -- 0
 				"0110000" when A = "0001" else -- 1
 				"1101101" when A = "0010" else -- 2
 				"1111001" when A = "0011" else -- 3
@@ -23,6 +25,8 @@ begin
 				"0111101" when A = "1101" else -- D
 				"1001111" when A = "1110" else -- E
 				"1000111" when A = "1111"; -- F
+	
+	Output <= not temp;
 end;
 
 
